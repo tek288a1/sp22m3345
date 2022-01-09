@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-09 Sun 18:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SP22M3345 Syllabus</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<style type="text/css">
+.noboldheader th {font-weight: normal;}
+th.org-right  { text-align: right;  }
+th.org-left   { text-align: left; }
+th.org-center { text-align: center; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+
+
+<h1 style="text-align:center; margin:.8em auto; color:#666666">Spring 2022: Math 3345</h1>
+<h1 style="text-align:center; margin: 1em auto; font-size:x-large; color:#666666">Foundations of Higher Mathematics</h1>
+
+<br>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="org-right noboldheader">
+
+  <colgroup>
+    <col  class="org-left" />
+    <col  class="org-right" />
+  </colgroup>
+
+  <tbody>
+    <tr>
+      <td class="org-left">Lecturer</td>
+      <td class="org-right">Tae Eun Kim, Ph.D.</td>
+    </tr>
+
+    <tr>
+      <td class="org-left">Email</td>
+      <td class="org-right"><a href="mailto:kim.3562@osu.edu">kim.3562@osu.edu</a></td>
+    </tr>
+
+    <tr>
+      <td class="org-left">Office</td>
+      <td class="org-right">Math Tower 349</td>
+    </tr>
+
+    <tr>
+      <td class="org-left">Office Hours</td>
+      <td class="org-right">MW 4:30PM &#x2013;6:00PM</td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="outline-container-org1336a5a" class="outline-2">
+<h2 id="org1336a5a">Course Objectives</h2>
+<div class="outline-text-2" id="text-org1336a5a">
+<blockquote style="font-style:italic">
+<p>
+Introduction to logic, proof techniques, st theory, number theory, real numbers.
+</p>
+</blockquote>
+<p style="text-align: right">
+&#x2013; <a href="https://math.osu.edu/sites/sites/default/files/courses/3345_0.pdf" style="text-align: right">Math Department Course Description</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ae22a2" class="outline-2">
+<h2 id="org4ae22a2">Texts</h2>
+<div class="outline-text-2" id="text-org4ae22a2">
+<ul class="org-ul">
+<li><i>The Fundamentals of Higher Mathematics</i> (Spring 2022 edition), by N. Falkner.</li>
+</ul>
+
+<p>
+Copies of the textbook are being produced by a company called XanEdu. They will be available through the OSU branch of Barnes &amp; Noble, in a DRM-protected digital form. Go to <a href="https://ohiostate.bncollege.com">ohiostate.bncollege.com</a> and follow the obvious links and prompts.
+</p>
+
+<p>
+In addition, all lecture slides and notes will be provided.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6d18fa" class="outline-2">
+<h2 id="orgb6d18fa">Course Grade</h2>
+<div class="outline-text-2" id="text-orgb6d18fa">
+<p>
+Your grade will be based on your performance on the following assignments:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="org-center noboldheader">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Quizzes</th>
+<th scope="col" class="org-right">5%</th>
+</tr>
+
+<tr>
+<th scope="col" class="org-left">Homework</th>
+<th scope="col" class="org-right">20%</th>
+</tr>
+
+<tr>
+<th scope="col" class="org-left">Midterms (2)</th>
+<th scope="col" class="org-right">40%</th>
+</tr>
+
+<tr>
+<th scope="col" class="org-left">Final Exam</th>
+<th scope="col" class="org-right">35%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Total</td>
+<td class="org-right">100%</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org3a58f9a" class="outline-4">
+<h4 id="org3a58f9a">Quizzes (5%)</h4>
+<div class="outline-text-4" id="text-org3a58f9a">
+<p>
+Quizzes are taken as timed quizzes on Carmen.
+</p>
+
+<p>
+Details are to be provided soon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc951752" class="outline-4">
+<h4 id="orgc951752">Homework (20%)</h4>
+<div class="outline-text-4" id="text-orgc951752">
+<p>
+The homework problems will be assigned along the semester. Assignments will be collected and graded electronically using Gradescope.
+</p>
+
+<p>
+Further details are to be provided soon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org752b6e8" class="outline-4">
+<h4 id="org752b6e8">Exams (75%)</h4>
+<div class="outline-text-4" id="text-org752b6e8">
+<p>
+There will be <b>3 exams</b> throughout the semester, the last of which is the final exam. The dates and weights of the exams are shown in the table below.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="org-center noboldheader">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Midterm 1 (20%)</td>
+<td class="org-left">TBD</td>
+</tr>
+
+<tr>
+<td class="org-left">Midterm 2 (20%)</td>
+<td class="org-left">TBD</td>
+</tr>
+
+<tr>
+<td class="org-left">Final Exam (30%)</td>
+<td class="org-left">10:00AM &#x2013; 11:45AM, Thursday, April 28 (Section 22786)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">12:00PM &#x2013; 1:45PM, Friday, April 29 (Section 21138)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Further details on exams or exam-specific policies will be released closer to the exam dates.
+</p>
+
+<p>
+Some aspects and details about the administration of exams are yet to be determined. They will be announced both in class and on Carmen no later than a week prior to the first exam.
+</p>
+
+<p>
+The final exam schedules are based on the guidelines of the University Registrar: <a href="https://registrar.osu.edu/scheduling/SchedulingContent/SP22Finals.pdf">Spring 22 Final Exam Schedule</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc0e939c" class="outline-2">
+<h2 id="orgc0e939c">Grading Scale</h2>
+<div class="outline-text-2" id="text-orgc0e939c">
+<p>
+The course letter grades will be determined using the OSU standard grading scheme:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="org-center noboldheader">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-left">[93, 100]</td>
+</tr>
+
+<tr>
+<td class="org-left">A-</td>
+<td class="org-left">[90, 93)</td>
+</tr>
+
+<tr>
+<td class="org-left">B+</td>
+<td class="org-left">[87, 90)</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-left">[83, 87)</td>
+</tr>
+
+<tr>
+<td class="org-left">B-</td>
+<td class="org-left">[80, 83)</td>
+</tr>
+
+<tr>
+<td class="org-left">C+</td>
+<td class="org-left">[77, 80)</td>
+</tr>
+
+<tr>
+<td class="org-left">C</td>
+<td class="org-left">[73, 77)</td>
+</tr>
+
+<tr>
+<td class="org-left">C-</td>
+<td class="org-left">[70, 73)</td>
+</tr>
+
+<tr>
+<td class="org-left">D+</td>
+<td class="org-left">[67, 70)</td>
+</tr>
+
+<tr>
+<td class="org-left">D</td>
+<td class="org-left">[60, 67)</td>
+</tr>
+
+<tr>
+<td class="org-left">E</td>
+<td class="org-left">[0, 60)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+These grading cutoffs will never be raised, but could be adjusted at the end of the semester. Individual assignments, including exams, <b>will not be curved</b>; <span class="underline">no email inquiries about this matter will be answered.</span>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f2a1de" class="outline-2">
+<h2 id="org8f2a1de">E-mail Communication</h2>
+<div class="outline-text-2" id="text-org8f2a1de">
+<p>
+I will only respond to class-related emails sent from your <span class="underline">university email account</span>. In addition, please keep in mind the following:
+</p>
+
+<ul class="org-ul">
+<li>Send your email to <a href="mailto:kim.3562@osu.edu">kim.3562@osu.edu</a>, not <code>kim.3562@buckeyemail.osu.edu</code>. It is absolutely important that you remember this because the account ending <code>"buckeyemail.osu.edu"</code> account is unattended.</li>
+<li>In the subject line of your email, include the course number (Math 3345) so that I know to respond in an appropriate time frame.</li>
+<li>Do not send attachments without first discussing it with me. It is sufficient to send the attachment in a separate email after describing it in a prior email.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8baa509" class="outline-2">
+<h2 id="org8baa509">Academic Misconduct Statement</h2>
+<div class="outline-text-2" id="text-org8baa509">
+<p>
+It is the responsibility of the Committee on Academic Misconduct to investigate or establish procedures for the investigation of all reported cases of student academic misconduct. The term “academic misconduct” includes all forms of student academic misconduct wherever committed; illustrated by, but not limited to, cases of plagiarism and dishonest practices in connection with examinations. Instructors shall report all instances of alleged academic misconduct to the committee (Faculty Rule 3335-5-48.7). For additional information, see the Code of Student Conduct at <a href="https://studentlife.osu.edu/csc/">https://studentlife.osu.edu/csc/</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7c3620" class="outline-2">
+<h2 id="orgd7c3620">Ownership of Course Recordings</h2>
+<div class="outline-text-2" id="text-orgd7c3620">
+<p>
+Ownership of course recordings and other materials (including exams and problem sets) and associated distribution rights shall be governed by the University Intellectual Property Policy for instructional works created by faculty or staff. Distribution of these works outside the context of the course may only be done with the express written permission of the relevant course instructor, and must comply with federal, state, and OSU student privacy rule and guidelines, including OSU Carmen terms of use.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c9b3ca" class="outline-2">
+<h2 id="org4c9b3ca">Health and Safety Concerns</h2>
+<div class="outline-text-2" id="text-org4c9b3ca">
+<p>
+All students, faculty and staff are required to comply with and stay up to date on all university safety and health guidance (<a href="https://safeandhealthy.osu.edu">https://safeandhealthy.osu.edu</a>), which includes following university mask policies and maintaining a safe physical distance at all times. Non-compliance will be warned first and disciplinary actions will be taken for repeated offenses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeeba4cd" class="outline-2">
+<h2 id="orgeeba4cd">Contingency for Change of Instructors</h2>
+<div class="outline-text-2" id="text-orgeeba4cd">
+<p>
+If an instructor is unable to continue work in the course for any reason, instruction work will shift to a substitute instructor.  Instructors in need of a substitute will not be expected to deal with any aspect of the transition to a substitute.  Direct communication with instructors over OSU email will not be accessible by substitutes, while communication via Carmen messaging should be immediately accessible to substitutes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org912efe4" class="outline-2">
+<h2 id="org912efe4">Mental Health Statement</h2>
+<div class="outline-text-2" id="text-org912efe4">
+<p>
+As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation. These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities. The Ohio State University offers services to assist you with addressing these and other concerns you may be experiencing. If you or someone you know are suffering from any of the aforementioned conditions, you can learn more about the broad range of confidential mental health services available on campus via the Office of Student Life’s Counseling and Consultation Service (CCS) by visiting <a href="https://ccs.osu.edu">https://ccs.osu.edu</a> or calling 614-292-5766. CCS is located on the 4th Floor of the Younkin Success Center and 10th Floor of Lincoln Tower. You can reach an on call counselor when CCS is closed at 614-292-5766 and 24 hour emergency help is also available through the 24/7 National Suicide Prevention Hotline at 1-800-273-TALK or at <a href="https://suicidepreventionlifeline.org">https://suicidepreventionlifeline.org</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6685ccd" class="outline-2">
+<h2 id="org6685ccd">Sexual Misconduct Statement</h2>
+<div class="outline-text-2" id="text-org6685ccd">
+<p>
+Title IX makes it clear that violence and harassment based on sex and gender are Civil Rights offenses subject to the same kinds of accountability and the same kinds of support applied to offenses against other protected categories (<i>e.g.</i>, race). If you or someone you know has been sexually harassed or assaulted, you may find the appropriate resources at <a href="https://titleix.osu.edu">https://titleix.osu.edu</a> or by contacting the Ohio State Title IX Coordinator, Kellie Brennan, at <a href="mailto:titleix@osu.edu">titleix@osu.edu</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf413a97" class="outline-2">
+<h2 id="orgf413a97">Diversity Statement</h2>
+<div class="outline-text-2" id="text-orgf413a97">
+<p>
+The Ohio State University affirms the importance and value of diversity in the student body. Our programs and curricula reflect our multicultural society and global economy and seek to provide opportunities for students to learn more about persons who are different from them. We are committed to maintaining a community that recognizes and values the inherent worth and dignity of every person; fosters sensitivity, understanding, and mutual respect among each member of our community; and encourages each individual to strive to reach his or her own potential. Discrimination against any individual based upon protected status, which is defined as age, color, disability, gender identity or expression, national origin, race, religion, sex, sexual orientation, or veteran status, is prohibited.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc916111" class="outline-2">
+<h2 id="orgc916111">Disability Services Statement</h2>
+<div class="outline-text-2" id="text-orgc916111">
+<blockquote style="font-size: 1.44em; line-height: 1.5">
+<p>
+The university strives to make all learning experiences as accessible as possible. In light of the current pandemic, students seeking to request COVID-related accommodations may do so through the university’s request process, managed by Student Life Disability Services.  If you anticipate or experience academic barriers based on your disability (including mental health, chronic, or temporary medical conditions), please let me know immediately so that we can privately discuss options.  To establish reasonable accommodations, I may request that you register with Student Life Disability Services.  After registration, make arrangements with me as soon as possible to discuss your accommodations so that they may be implemented in a timely fashion. SLDS contact information: <a href="mailto:slds@osu.edu">slds@osu.edu</a>; 614-292-3307; <a href="https://slds.osu.edu">https://slds.osu.edu</a>; 098 Baker Hall, 113 W. 12th Avenue.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-01-09 Sun 18:16</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

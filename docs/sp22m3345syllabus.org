@@ -1,0 +1,323 @@
+:MACROS:
+#+MACRO: quote @@html:<q>$1</q>@@@@latex:``$1''@@
+#+MACRO: options (eval (progn (org-sbe "tk/options") (tk/options org-export-current-backend)))
+#+MACRO: if-html (eval (if (org-export-derived-backend-p org-export-current-backend 'html) "$1"))
+#+MACRO: hfill @@latex:\hfill$1@@@@html:<p style="text-align: right">$1</p>@@
+:END:
+:EXPORT_CONFIG:
+# General ---------------------
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+EXPORT_FILE_NAME: sp22m3345syllabus
+
+# LaTeX -----------------------
+#+LATEX_HEADER: \usepackage[margin=1in]{geometry}
+#+LATEX_HEADER: \usepackage{multirow}
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \usepackage{color}
+#+LATEX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue,filecolor=blue,urlcolor=blue}
+#+LATEX_HEADER: \pagestyle{plain}
+#+LATEX_HEADER: \setlength\parindent{0pt}
+
+# HTML ------------------------
+#+HTML_HEAD_EXTRA:  <style type="text/css">
+#+HTML_HEAD_EXTRA:    .noboldheader th {font-weight: normal;}
+#+HTML_HEAD_EXTRA:    th.org-right  { text-align: right;  }
+#+HTML_HEAD_EXTRA:    th.org-left   { text-align: left; }
+#+HTML_HEAD_EXTRA:    th.org-center { text-align: center; }
+#+HTML_HEAD_EXTRA:  </style>
+
+# Theming ----------------
+# Read the docs: set "toc:t"
+# #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+# #+SETUPFILE: ../assets/org-themes/src/readtheorg_inline/readtheorg_inline.theme
+
+# Comfy! Light Redish look
+#+SETUPFILE: ../assets/org-themes/src/comfy_inline/comfy_inline.theme
+# |--> Make H2 headings more distinguishable
+
+# Clean, fun font
+# #+SETUPFILE: ../assets/org-themes/src/imagine_light/imagine_light.theme
+# |--> table alignment
+
+# Professional and clean
+# #+SETUPFILE: ../assets/org-themes/src/latexcss/latexcss.theme
+# #+SETUPFILE: ../assets/org-themes/src/plain/plain.theme
+# |-- the same as latexcss?
+# #+SETUPFILE: ../assets/org-themes/src/simple_gray/simple_gray.theme
+# |--> need to increase font size
+# #+SETUPFILE: ../assets/org-themes/src/simple_inline/simple_inline.theme
+# |--> horizontal alignments of tables
+# #+SETUPFILE: ../assets/org-themes/src/simple_white/simple_white.theme
+# |--> maybe change the background color of headings
+# #+SETUPFILE: ../assets/org-themes/src/simple_whiteblue/simple_whiteblue.theme
+# #+SETUPFILE: ../assets/org-themes/src/stylish_white/stylish_white.theme
+# |--> font too thin
+# #+SETUPFILE: ../assets/org-themes/src/white_clean/white_clean.theme
+# |--> Using stars for headers (just like org mode)
+
+# Meh (low readability, poor design, etc)
+# #+SETUPFILE: ../assets/org-themes/src/bigblow_inline/bigblow_inline.theme
+# #+SETUPFILE: ../assets/org-themes/src/darksun/darksun.theme
+# #+SETUPFILE: ../assets/org-themes/src/rethink_inline/rethink_inline.theme
+# #+SETUPFILE: ../assets/org-themes/src/retro_dark/retro_dark.theme
+
+# Solarized: not a big fan of the theme, but like the bold sizing of headers
+# #+SETUPFILE: ../assets/org-themes/src/solarized_dark/solarized_dark.theme
+# #+SETUPFILE: ../assets/org-themes/src/solarized_light/solarized_light.theme
+:END:
+#+STARTUP: indent overview
+#+OPTIONS: date:nil author:nil title:nil timestamp:t
+{{{options}}}
+#+TITLE: SP22M3345 Syllabus
+#+AUTHOR: Tae Eun Kim, Ph.D.
+
+* Utility codes                                                    :noexport:
+
+Nice way to load options conditionally based on [[https://emacs.stackexchange.com/questions/64029/can-org-options-be-applied-to-specific-export-modes-only][this post]]. See the macro =options= defined at the top of this document.
+
+#+name: tk/options
+#+begin_src elisp
+  (defun tk/options (backend)
+     "Different options for different backends. Caveat: this function needs to be
+      defined, before the file is exported. And if e.g. an option changes, it needs to
+      be defined again (just run the code block with `C-c C-c')."
+     (cond
+      ((org-export-derived-backend-p backend 'latex) "#+OPTIONS: latex:t num:nil toc:nil")
+      ((org-export-derived-backend-p backend 'html) "#+OPTIONS: html:t num:nil toc:nil")))
+#+end_src
+
+* Notes                                                            :noexport:
+ - https://people.math.osu.edu/nguyen.1261/3345-19.html
+ - https://people.math.osu.edu/paquette.30/Teaching/Math3345Syllabus.pdf
+ - https://people.math.osu.edu/fusi.1/Math-3345-Syllabus.pdf
+
+* Title                                                              :ignore:
+** LaTeX                                                            :ignore:
+#+BEGIN_EXPORT latex
+\textit{\footnotesize Updated on \today}
+
+\hrulefill
+\vspace{1em}
+\begin{center}
+  \begin{tabular}{ c }
+    \Large \bf Math 3345 -- Spring 2022 \\\\
+    \LARGE \bf Foundations of Higher Mathematics
+    % \large \sf (Distance Learning)
+  \end{tabular}
+\end{center}
+\vspace{5mm}
+\hfill
+\begin{tabular}{rl}
+  \large Lecturer: & Tae Eun Kim, Ph.D.\\
+  \large Email: & \url{kim.3562@osu.edu} \\
+  \large Office: & Math Tower 349 \\
+  \large Office Hours: & MW 4:30PM -- 6:00PM
+\end{tabular}
+\vspace{5mm}
+#+END_EXPORT
+
+** HTML                                                             :ignore:
+
+#+begin_comment
+For now, hard-coded the following table in html. Figure out a way to export it conditionally.
+#+ATTR_HTML: :class org-right noboldheader
+
+| <l>          |                <r> |
+| Lecturer     | Tae Eun Kim, Ph.D. |
+| Email        |   [[mailto:kim.3562@osu.edu][kim.3562@osu.edu]] |
+| Office       |     Math Tower 349 |
+| Office Hours | MW 4:30PM --6:00PM |
+#+end_comment
+
+#+begin_export html
+<h1 style="text-align:center; margin:.8em auto; color:#666666">Spring 2022: Math 3345</h1>
+<h1 style="text-align:center; margin: 1em auto; font-size:x-large; color:#666666">Foundations of Higher Mathematics</h1>
+
+<br>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="org-right noboldheader">
+
+  <colgroup>
+    <col  class="org-left" />
+    <col  class="org-right" />
+  </colgroup>
+
+  <tbody>
+    <tr>
+      <td class="org-left">Lecturer</td>
+      <td class="org-right">Tae Eun Kim, Ph.D.</td>
+    </tr>
+
+    <tr>
+      <td class="org-left">Email</td>
+      <td class="org-right"><a href="mailto:kim.3562@osu.edu">kim.3562@osu.edu</a></td>
+    </tr>
+
+    <tr>
+      <td class="org-left">Office</td>
+      <td class="org-right">Math Tower 349</td>
+    </tr>
+
+    <tr>
+      <td class="org-left">Office Hours</td>
+      <td class="org-right">MW 4:30PM &#x2013;6:00PM</td>
+    </tr>
+  </tbody>
+</table>
+#+end_export
+
+* Course Objectives
+#+LATEX: \begingroup\it
+#+ATTR_HTML: :style font-style:italic
+#+BEGIN_QUOTE
+Introduction to logic, proof techniques, st theory, number theory, real numbers.
+#+END_QUOTE
+#+LATEX: \endgroup
+
+#+LATEX: \hfill
+#+ATTR_HTML: :style text-align: right
+-- [[https://math.osu.edu/sites/sites/default/files/courses/3345_0.pdf][Math Department Course Description]]
+
+* Prerequisites                                                    :noexport:
+
+Major or minor in Math, CSE, or CIS.
+
+ - *Math:* C- or better in 2153, 2162.xx, 2173, or 2182H
+ - *CIS or CSE:* C- or better in both CSE 2321 and C- or better in 1151, 1161.xx, 1172, 1181H, 1534, or 1544
+
+* Texts
+
+ - /The Fundamentals of Higher Mathematics/ (Spring 2022 edition), by N. Falkner.
+
+Copies of the textbook are being produced by a company called XanEdu. They will be available through the OSU branch of Barnes & Noble, in a DRM-protected digital form. Go to [[https://ohiostate.bncollege.com][ohiostate.bncollege.com]] and follow the obvious links and prompts.
+
+In addition, all lecture slides and notes will be provided.
+
+* Technology Requirements                                          :noexport:
+
+ - *General Computing Environment.* You are required to have an access to a computer with a stable internet connection as major aspects of the course will be conducted online. Homework, online quizzes, and exams will be turned in via Carmen or Gradescope. You are responsible for maintaining your web browser and internet connection compatible with these course tools.
+
+ - *Handwritten Work to PDF.* You are required to have some means to convert your handwritten work into a .pdf file in order to prepare some of your assignments for online submission. This can be done, for example, using a note-taking app on a tablet device or scanning your work using a cell-phone scanner app.
+
+ - *MATLAB.* As MATLAB is an integral part of this course, you will need access to it both during and outside of virtual classes. You may download a copy of the software by following the instructions at [[http://ocio.osu.edu/software/]]. You are responsible for backing up your work regularly using a reliable method of your choice.
+
+* Course Grade
+
+Your grade will be based on your performance on the following assignments:
+
+#+ATTR_HTML: :class org-center noboldheader
+#+ATTR_LATEX: :center t :align l|r
+| /            |   <> |
+| <l>          |  <r> |
+| Quizzes      |   5% |
+| Homework     |  20% |
+| Midterms (2) |  40% |
+| Final Exam   |  35% |
+|--------------+------|
+| Total        | 100% |
+
+*** Quizzes (5%)
+Quizzes are taken as timed quizzes on Carmen.
+
+Details are to be provided soon.
+
+*** Homework (20%)
+The homework problems will be assigned along the semester. Assignments will be collected and graded electronically using Gradescope.
+
+Further details are to be provided soon.
+
+*** Exams (75%)
+There will be *3 exams* throughout the semester, the last of which is the final exam. The dates and weights of the exams are shown in the table below.
+
+#+ATTR_HTML: :class org-center noboldheader
+#+ATTR_LATEX: :center t
+| /                | <                                                      |
+| <l>              | <l>                                                    |
+| Midterm 1 (20%)  | TBD                                                    |
+| Midterm 2 (20%)  | TBD                                                    |
+| Final Exam (30%) | 10:00AM -- 11:45AM, Thursday, April 28 (Section 22786) |
+|                  | 12:00PM -- 1:45PM, Friday, April 29 (Section 21138)    |
+
+Further details on exams or exam-specific policies will be released closer to the exam dates.
+
+Some aspects and details about the administration of exams are yet to be determined. They will be announced both in class and on Carmen no later than a week prior to the first exam.
+
+The final exam schedules are based on the guidelines of the University Registrar: [[https://registrar.osu.edu/scheduling/SchedulingContent/SP22Finals.pdf][Spring 22 Final Exam Schedule]].
+
+* Grading Scale
+
+The course letter grades will be determined using the OSU standard grading scheme:
+
+#+ATTR_HTML: :class org-center noboldheader
+#+ATTR_LATEX: :center t
+| /   | <         |
+| <l> | <l>       |
+| A   | [93, 100] |
+| A-  | [90, 93)  |
+| B+  | [87, 90)  |
+| B   | [83, 87)  |
+| B-  | [80, 83)  |
+| C+  | [77, 80)  |
+| C   | [73, 77)  |
+| C-  | [70, 73)  |
+| D+  | [67, 70)  |
+| D   | [60, 67)  |
+| E   | [0, 60)   |
+
+These grading cutoffs will never be raised, but could be adjusted at the end of the semester. Individual assignments, including exams, *will not be curved*; _no email inquiries about this matter will be answered._
+
+* E-mail Communication
+
+I will only respond to class-related emails sent from your _university email account_. In addition, please keep in mind the following:
+
+ - Send your email to [[mailto:kim.3562@osu.edu][kim.3562@osu.edu]], not =kim.3562@buckeyemail.osu.edu=. It is absolutely important that you remember this because the account ending ="buckeyemail.osu.edu"= account is unattended.
+ - In the subject line of your email, include the course number (Math 3345) so that I know to respond in an appropriate time frame.
+ - Do not send attachments without first discussing it with me. It is sufficient to send the attachment in a separate email after describing it in a prior email.
+
+* Plagiarism                                                       :noexport:
+
+Plagiarism will not be tolerated, especially when it comes to code. Do not copy your code from other students, online sources, or anyone else, and do not give your code to anyone else to copy.  You may however discuss problems with other students and render help in debugging.
+
+@@latex:\bgroup \small@@
+*Exceptions:* you are permitted to use code from the textbook or presented during class, but you must still be able to explain how it is supposed to work.
+@@latex:\egroup@@
+
+* Academic Misconduct Statement
+
+It is the responsibility of the Committee on Academic Misconduct to investigate or establish procedures for the investigation of all reported cases of student academic misconduct. The term “academic misconduct” includes all forms of student academic misconduct wherever committed; illustrated by, but not limited to, cases of plagiarism and dishonest practices in connection with examinations. Instructors shall report all instances of alleged academic misconduct to the committee (Faculty Rule 3335-5-48.7). For additional information, see the Code of Student Conduct at [[https://studentlife.osu.edu/csc/]].
+
+* Ownership of Course Recordings
+
+Ownership of course recordings and other materials (including exams and problem sets) and associated distribution rights shall be governed by the University Intellectual Property Policy for instructional works created by faculty or staff. Distribution of these works outside the context of the course may only be done with the express written permission of the relevant course instructor, and must comply with federal, state, and OSU student privacy rule and guidelines, including OSU Carmen terms of use.
+
+* Health and Safety Concerns
+
+All students, faculty and staff are required to comply with and stay up to date on all university safety and health guidance (https://safeandhealthy.osu.edu), which includes following university mask policies and maintaining a safe physical distance at all times. Non-compliance will be warned first and disciplinary actions will be taken for repeated offenses.
+
+* Contingency for Change of Instructors
+
+If an instructor is unable to continue work in the course for any reason, instruction work will shift to a substitute instructor.  Instructors in need of a substitute will not be expected to deal with any aspect of the transition to a substitute.  Direct communication with instructors over OSU email will not be accessible by substitutes, while communication via Carmen messaging should be immediately accessible to substitutes.
+
+* Mental Health Statement
+
+As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation. These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities. The Ohio State University offers services to assist you with addressing these and other concerns you may be experiencing. If you or someone you know are suffering from any of the aforementioned conditions, you can learn more about the broad range of confidential mental health services available on campus via the Office of Student Life’s Counseling and Consultation Service (CCS) by visiting [[https://ccs.osu.edu]] or calling 614-292-5766. CCS is located on the 4th Floor of the Younkin Success Center and 10th Floor of Lincoln Tower. You can reach an on call counselor when CCS is closed at 614-292-5766 and 24 hour emergency help is also available through the 24/7 National Suicide Prevention Hotline at 1-800-273-TALK or at [[https://suicidepreventionlifeline.org]].
+
+* Sexual Misconduct Statement
+
+Title IX makes it clear that violence and harassment based on sex and gender are Civil Rights offenses subject to the same kinds of accountability and the same kinds of support applied to offenses against other protected categories (/e.g./, race). If you or someone you know has been sexually harassed or assaulted, you may find the appropriate resources at [[https://titleix.osu.edu]] or by contacting the Ohio State Title IX Coordinator, Kellie Brennan, at [[mailto:titleix@osu.edu][titleix@osu.edu]].
+
+* Diversity Statement
+
+The Ohio State University affirms the importance and value of diversity in the student body. Our programs and curricula reflect our multicultural society and global economy and seek to provide opportunities for students to learn more about persons who are different from them. We are committed to maintaining a community that recognizes and values the inherent worth and dignity of every person; fosters sensitivity, understanding, and mutual respect among each member of our community; and encourages each individual to strive to reach his or her own potential. Discrimination against any individual based upon protected status, which is defined as age, color, disability, gender identity or expression, national origin, race, religion, sex, sexual orientation, or veteran status, is prohibited.
+
+* Disability Services Statement
+
+#+LATEX: \begin{spacing}{1.5}
+#+LATEX: \bgroup\Large\sf
+#+ATTR_HTML: :style font-size: 1.44em; line-height: 1.5
+#+BEGIN_QUOTE
+The university strives to make all learning experiences as accessible as possible. In light of the current pandemic, students seeking to request COVID-related accommodations may do so through the university’s request process, managed by Student Life Disability Services.  If you anticipate or experience academic barriers based on your disability (including mental health, chronic, or temporary medical conditions), please let me know immediately so that we can privately discuss options.  To establish reasonable accommodations, I may request that you register with Student Life Disability Services.  After registration, make arrangements with me as soon as possible to discuss your accommodations so that they may be implemented in a timely fashion. SLDS contact information: [[mailto:slds@osu.edu][slds@osu.edu]]; 614-292-3307; [[https://slds.osu.edu]]; 098 Baker Hall, 113 W. 12th Avenue.
+#+END_QUOTE
+#+LATEX: \egroup
+#+LATEX: \end{spacing}
